@@ -6,7 +6,7 @@ EcoTrace is an end-to-end environmental intelligence platform that uncovers hidd
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 1. **Deterministic ISO 14040/44 LCA Engine:**
    - Calculations are grounded in **Ecoinvent v3.10**, **DEFRA UK GHG (2024)**, and the **GLEC Logistics Framework**.
@@ -39,7 +39,7 @@ EcoTrace is an end-to-end environmental intelligence platform that uncovers hidd
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 ```
 EcoTrace/
@@ -57,7 +57,7 @@ EcoTrace/
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### 1. Backend (FastAPI)
 ```bash
@@ -75,7 +75,7 @@ Web Interface: `http://localhost:3000`
 
 ---
 
-## 📸 Interface Showcase
+## Interface Showcase
 
 <div align="center">
 
@@ -95,7 +95,7 @@ Web Interface: `http://localhost:3000`
 
 ---
 
-## 📚 Documentation
+## Documentation
 - [Methodology & LCA Calculations](docs/methodology.md) — ISO 14040/44 lifecycle allocation & deterministic formulas
 - [Data Sources & Reference Coefficients](docs/data-sources.md) — Ecoinvent v3.10 & DEFRA emission factors
 
