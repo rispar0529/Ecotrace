@@ -1,7 +1,16 @@
 import os
 from typing import List, Dict, Any
+from pathlib import Path
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+
+# Load .env from backend or root directory
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path)
+else:
+    load_dotenv()
 
 from models import ProductModel, AnalyzeRequest, ScenarioRequest, ScenarioResult
 from database import SEEDED_PRODUCTS

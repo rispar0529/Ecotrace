@@ -5,10 +5,19 @@ with calibrated deterministic LCA guardrails.
 """
 
 import os
+from pathlib import Path
+from dotenv import load_dotenv
 import httpx
 from typing import Dict, Any, Optional
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBpl7lQ84fhSV8VPrhPnZghwt99_GsdRNo")
+# Ensure environment variables are loaded
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path)
+else:
+    load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("LLM_MODEL", "gemini-2.5-flash")
 
 def get_ai_explanation(product_name: str, hotspot: str, hotspot_stage: str, carbon_kg: float) -> str:
